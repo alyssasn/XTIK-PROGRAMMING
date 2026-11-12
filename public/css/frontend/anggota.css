@@ -1,0 +1,547 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    width: 100%;
+    height: 67px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand h2 {
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+
+    padding: 28px 0;
+
+    color: #111111;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #075ba7;
+}
+
+.nav-link.active {
+    color: #075ba7;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 17px;
+
+    height: 2px;
+
+    background: #075ba7;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.anggota {
+    width: 100%;
+    padding: 15px 24px 12px;
+
+    flex: 1;
+}
+
+.anggota-header {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 8px;
+}
+
+.anggota-title h1 {
+    font-size: 27px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.anggota-title p {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+/* =========================
+   TOTAL ANGGOTA
+========================= */
+
+.total-anggota {
+    width: 142px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.total-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #5c3a9d;
+}
+
+.total-icon i {
+    font-size: 23px;
+}
+
+.total-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-text span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.total-text strong {
+    margin-top: 1px;
+
+    font-size: 22px;
+    line-height: 1;
+
+    color: #075ba7;
+}
+
+.total-text small {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABEL
+========================= */
+/* =========================
+   TABEL
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    border: 1.5px solid #075ba7;
+    border-radius: 9px;
+
+    background: #ffffff;
+}
+
+.anggota-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-size: 13px;
+}
+
+
+/* HEADER TABEL */
+
+.anggota-table thead {
+    background: #f1f1f1;
+}
+
+.anggota-table th {
+    height: 42px;
+
+    padding: 10px 12px;
+
+    text-align: left;
+
+    font-weight: 400;
+
+    border-bottom: 1.5px solid #075ba7;
+}
+
+
+/* UKURAN KOLOM */
+
+.anggota-table th:nth-child(1),
+.anggota-table td:nth-child(1) {
+    width: 7%;
+    text-align: center;
+}
+
+.anggota-table th:nth-child(2),
+.anggota-table td:nth-child(2) {
+    width: 22%;
+}
+
+.anggota-table th:nth-child(3),
+.anggota-table td:nth-child(3) {
+    width: 9%;
+}
+
+.anggota-table th:nth-child(4),
+.anggota-table td:nth-child(4) {
+    width: 37%;
+}
+
+.anggota-table th:nth-child(5),
+.anggota-table td:nth-child(5) {
+    width: 25%;
+}
+
+
+/* ISI TABEL */
+
+.anggota-table td {
+    height: 50px;
+
+    padding: 10px 12px;
+
+    border-bottom: 1px solid #cccccc;
+
+    vertical-align: middle;
+}
+
+.anggota-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    width: 100%;
+    height: 35px;
+    background: #075ba7;
+    flex-shrink: 0;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 18px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .anggota {
+        padding: 10px 18px;
+    }
+
+    .anggota-title h1 {
+        font-size: 25px;
+    }
+
+    .anggota-table {
+        min-width: 750px;
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 65px;
+        padding: 0 14px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .menu-icon {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 35px;
+        height: 35px;
+
+        font-size: 24px;
+
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        right: 15px;
+
+        width: 205px;
+
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+
+    /* ANGGOTA */
+
+    .anggota {
+        padding: 12px 15px 10px;
+    }
+
+    .anggota-header {
+        flex-direction: column;
+    }
+
+    .anggota-title h1 {
+        font-size: 24px;
+    }
+
+    .anggota-title p {
+        font-size: 13px;
+    }
+
+    .total-anggota {
+        align-self: flex-end;
+    }
+
+
+    /* TABEL */
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .anggota-table {
+        min-width: 750px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        height: 45px;
+    }
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 25px 0 15px 0;
+    margin: 0;
+}
+.page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.page-item.active .page-link {
+    background: #0b5aa2;
+    color: #ffffff;
+    border-color: #0b5aa2;
+    box-shadow: 0 4px 12px rgba(11, 90, 162, 0.3);
+}
+.page-item .page-link:hover:not(.active) {
+    background: #eaf3fd;
+    color: #0b5aa2;
+}
+.page-item.disabled .page-link {
+    color: #cbd5e1;
+    pointer-events: none;
+    background: #f8fafc;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

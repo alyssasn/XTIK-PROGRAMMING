@@ -1,0 +1,592 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.admin-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.admin-header {
+    width: 100%;
+    height: 67px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px 0 28px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.header-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* MENU */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #222;
+    cursor: pointer;
+}
+
+/* LOGO */
+.header-logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 11px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* BRAND */
+.header-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-brand h1 {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.header-brand p {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #555;
+}
+
+/* =====================================================
+   ADMIN PROFILE
+===================================================== */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #b7b7b7;
+    color: #fff;
+    font-size: 18px;
+}
+
+.admin-profile h3 {
+    font-size: 14px;
+}
+
+.admin-profile p {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #777;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar {
+    position: fixed;
+    top: 67px;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    padding: 27px 15px 18px;
+    background: #073968;
+    color: #fff;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* SCROLLBAR */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+/* =====================================================
+   SIDEBAR TITLE
+===================================================== */
+.sidebar h2 {
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #b9c5d1;
+}
+
+/* =====================================================
+   SIDEBAR NAV
+===================================================== */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-link {
+    width: 100%;
+    height: 43px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-link.active {
+    background: #fff;
+    color: #075ba7;
+}
+
+/* =====================================================
+   SIDEBAR BOTTOM
+===================================================== */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* =====================================================
+   CONTENT BERITA
+===================================================== */
+/* ================= BERITA CONTENT ================= */
+
+.berita-content {
+    margin-left: 220px;
+    padding: 75px 25px 25px;
+    min-height: calc(100vh - 67px);
+}
+
+/* Judul */
+.page-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.heading-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-icon i {
+    font-size: 38px;
+    color: #0878dc;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.page-heading p {
+    margin: 5px 0 0;
+    font-size: 15px;
+}
+
+/* Tabel */
+.news-table-box {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.news-table-box table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.news-table-box th {
+    height: 52px;
+    padding: 10px 16px;
+    background: #ddd;
+    font-size: 17px;
+    text-align: left;
+}
+
+.news-table-box td {
+    height: 175px;
+    padding: 12px 16px;
+    font-size: 15px;
+    vertical-align: top;
+    border-top: 1px solid #aaa;
+}
+
+/* Gambar */
+.news-table-box td img {
+    width: 210px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Judul berita */
+.news-table-box td:nth-child(3) {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Deskripsi */
+.news-table-box td:nth-child(4) {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Tanggal */
+.news-table-box td:nth-child(5) {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Aksi */
+.news-table-box td:nth-child(6) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.news-table-box .action-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+
+.news-table-box .action-btn i {
+    font-size: 16px;
+}
+
+.news-table-box tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   KOLOM
+===================================================== */
+
+.news-table-box th:nth-child(1),
+.news-table-box td:nth-child(1) {
+    width: 55px;
+    text-align: center;
+}
+
+.news-table-box th:nth-child(2),
+.news-table-box td:nth-child(2) {
+    width: 260px;
+}
+
+.news-table-box th:nth-child(3),
+.news-table-box td:nth-child(3) {
+    width: 170px;
+}
+
+.news-table-box th:nth-child(4),
+.news-table-box td:nth-child(4) {
+    width: auto;
+}
+
+.news-table-box th:nth-child(5),
+.news-table-box td:nth-child(5) {
+    width: 125px;
+}
+
+.news-table-box th:nth-child(6),
+.news-table-box td:nth-child(6) {
+    width: 105px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   GAMBAR
+===================================================== */
+
+.news-image {
+    width: 235px;
+    height: 170px;
+
+    background: #ddd;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =====================================================
+   AKSI
+===================================================== */
+
+.actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 5px;
+}
+
+.edit-button,
+.delete-button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #fff;
+    font-size: 17px;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-button {
+    background: #0872d8;
+}
+
+.delete-button {
+    background: #ff0000;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: .85;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+    width: calc(100% - 220px);
+    height: 55px;
+    margin-left: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0872d8;
+    color: white;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* =====================================================
+   SIDEBAR TOGGLE
+===================================================== */
+
+#sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(-313px);
+}
+
+#sidebar-toggle:checked ~ .berita-content {
+    margin-left: 0;
+}
+
+#sidebar-toggle:checked ~ .footer {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 1000px) {
+
+    .berita-content {
+        margin-left: 220px;
+        padding: 90px 15px 25px;
+    }
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .page-heading p {
+        font-size: 15px;
+    }
+
+    .news-table-box th {
+        font-size: 16px;
+    }
+
+    .news-table-box td {
+        font-size: 14px;
+    }
+
+    .news-image {
+        width: 180px;
+        height: 140px;
+    }
+
+    .footer {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .berita-content {
+        margin-left: 0;
+        padding: 75px 10px 20px;
+    }
+
+    .page-heading {
+        gap: 8px;
+        margin-left: 5px;
+    }
+
+    .heading-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+    .page-heading p {
+        font-size: 12px;
+    }
+
+    .news-table-box {
+        overflow-x: auto;
+    }
+
+    .news-table-box table {
+        min-width: 850px;
+    }
+
+    .news-table-box th {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .news-table-box td {
+        height: 150px;
+        font-size: 13px;
+    }
+
+    .news-image {
+        width: 150px;
+        height: 125px;
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .footer {
+        width: 100%;
+        margin-left: 0;
+        height: 55px;
+    }
+}

@@ -1,0 +1,916 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 78px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* LOGO AREA */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* BRAND */
+
+.brand h2 {
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-link {
+    position: relative;
+
+    padding: 30px 0;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #075ba7;
+}
+
+
+/* MENU AKTIF */
+
+.nav-link.active {
+    color: #075ba7;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 20px;
+
+    height: 2px;
+
+    background: #075ba7;
+}
+
+
+/* HAMBURGER */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* =========================
+   BAGIAN BERITA
+========================= */
+
+.berita {
+    width: 100%;
+
+    padding: 28px 18px 60px;
+}
+
+
+/* =========================
+   JUDUL BERITA
+========================= */
+
+.berita-header {
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ICON DOKUMEN */
+
+.title-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-document {
+    position: relative;
+
+    width: 43px;
+    height: 50px;
+
+    border: 3px solid #0878dc;
+
+    border-radius: 4px;
+}
+
+
+/* GARIS-GARIS ICON */
+
+.icon-document span {
+    position: absolute;
+
+    left: 9px;
+
+    width: 20px;
+    height: 3px;
+
+    background: #0878dc;
+
+    border-radius: 2px;
+}
+
+.icon-document span:nth-child(1) {
+    top: 13px;
+}
+
+.icon-document span:nth-child(2) {
+    top: 22px;
+}
+
+.icon-document span:nth-child(3) {
+    top: 31px;
+}
+
+
+/* BAGIAN SAMPING ICON */
+
+.icon-document::after {
+    content: "";
+
+    position: absolute;
+
+    width: 39px;
+    height: 47px;
+
+    left: 7px;
+    top: 7px;
+
+    border-right: 3px solid #0878dc;
+    border-bottom: 3px solid #0878dc;
+
+    border-radius: 0 4px 4px 0;
+
+    z-index: -1;
+}
+
+
+/* TEXT JUDUL */
+
+.title-text h1 {
+    font-size: 20px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.title-text p {
+    margin-top: 7px;
+
+    font-size: 15px;
+
+    line-height: 0.5;
+}
+
+
+/* =========================
+   GARIS BIRU
+========================= */
+
+.title-line {
+    width: 4vw;
+    height: 2px;
+    background: #0878dc;
+    margin: 22px 0 32px;
+    margin-left: 21px;
+}
+
+
+/* =========================
+   GRID CARD
+========================= */
+
+.news-grid {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.news-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #b8b8b8;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    height: 460px;
+}
+
+
+/* =========================
+   FOTO CARD
+========================= */
+
+.news-image {
+    position: relative;
+
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   TANGGAL
+========================= */
+
+.date {
+    position: absolute;
+
+    left: 25px;
+    bottom: 0;
+
+    width: 82px;
+    height: 90px;
+
+    padding: 7px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #075ba7;
+
+    color: #ffffff;
+
+    border-radius: 13px 13px 0 0;
+}
+
+
+/* ANGKA */
+
+.date strong {
+    font-size: 22px;
+
+    line-height: 1;
+
+    margin-bottom: 5px;
+}
+
+
+/* BULAN + TAHUN */
+
+.date span {
+    font-size: 15px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   ISI CARD
+========================= */
+
+.news-content {
+    padding: 24px 28px 28px;
+}
+
+
+/* KATEGORI */
+
+.category {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+    height: 34px;
+
+    padding: 0 12px;
+
+    border: 1.5px solid #006dcc;
+
+    border-radius: 9px;
+
+    color: #075ba7;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* JUDUL CARD */
+
+.news-content h2 {
+    margin-top: 19px;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+/* DESKRIPSI */
+
+.news-content p {
+    margin-top: 13px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: #222222;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+
+    min-height: 70px;
+
+    padding: 0 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background: #075ba7;
+
+    color: #ffffff;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    width: calc(100% - 220px);
+    min-height: 65px;
+
+    margin-left: 220px;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background: #0872d8;
+
+    color: #fff;
+
+    border: none;
+
+    transition: .3s;
+}
+
+.footer p {
+    margin: 0;
+
+    font-size: 13px;
+    color: #fff;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 0 35px;
+    }
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .news-grid {
+        gap: 20px;
+    }
+
+    .news-content {
+        padding: 22px;
+    }
+
+    .news-content h2 {
+        font-size: 20px;
+    }
+
+    .news-content p {
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 0 35px;
+    }
+}
+
+
+/* =========================
+   TABLET KECIL
+========================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 25px;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand h2 {
+        font-size: 17px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-icon {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 27px;
+
+        cursor: pointer;
+    }
+
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        right: 20px;
+
+        width: 220px;
+
+        padding: 10px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: #ffffff;
+
+        border: 1px solid #dddddd;
+
+        border-radius: 8px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+        z-index: 1000;
+    }
+
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+
+    .nav-link {
+        width: 100%;
+
+        padding: 13px 12px;
+
+        font-size: 14px;
+    }
+
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+
+    /* BERITA */
+
+    .berita {
+        padding: 25px 20px 50px;
+    }
+
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .news-card {
+        min-height: 540px;
+    }
+
+
+    .news-image {
+        height: 220px;
+    }
+
+
+    .footer {
+        padding: 0 25px;
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+
+    .logo {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 24px;
+    }
+
+
+    .nav-menu {
+        top: 65px;
+
+        right: 15px;
+
+        width: 205px;
+    }
+
+
+    /* JUDUL */
+
+    .berita {
+        padding: 22px 15px 45px;
+    }
+
+
+    .berita-header {
+        gap: 12px;
+    }
+
+
+    .title-icon {
+        width: 45px;
+        height: 50px;
+    }
+
+
+    .icon-document {
+        width: 34px;
+        height: 42px;
+    }
+
+
+    .icon-document span {
+        left: 7px;
+
+        width: 17px;
+        height: 2px;
+    }
+
+
+    .icon-document span:nth-child(1) {
+        top: 11px;
+    }
+
+    .icon-document span:nth-child(2) {
+        top: 19px;
+    }
+
+    .icon-document span:nth-child(3) {
+        top: 27px;
+    }
+
+
+    .title-text h1 {
+        font-size: 25px;
+    }
+
+
+    .title-text p {
+        font-size: 15px;
+
+        margin-top: 5px;
+    }
+
+
+    .title-line {
+        margin: 18px auto 25px;
+    }
+
+
+    /* CARD */
+
+    .news-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    .news-card {
+        min-height: 0;
+    }
+
+
+    .news-image {
+        height: 220px;
+    }
+
+
+    .date {
+        left: 18px;
+
+        width: 72px;
+        height: 82px;
+    }
+
+
+    .date strong {
+        font-size: 20px;
+    }
+
+
+    .date span {
+        font-size: 13px;
+    }
+
+
+    .news-content {
+        padding: 20px;
+    }
+
+
+    .category {
+        min-width: 82px;
+        height: 32px;
+
+        font-size: 14px;
+    }
+
+
+    .news-content h2 {
+        margin-top: 17px;
+
+        font-size: 20px;
+    }
+
+
+    .news-content p {
+        margin-top: 11px;
+
+        font-size: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        min-height: 80px;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        text-align: center;
+    }
+
+
+    .footer p {
+        font-size: 10px;
+    }
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 25px 0 15px 0;
+    margin: 0;
+}
+.page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.page-item.active .page-link {
+    background: #0b5aa2;
+    color: #ffffff;
+    border-color: #0b5aa2;
+    box-shadow: 0 4px 12px rgba(11, 90, 162, 0.3);
+}
+.page-item .page-link:hover:not(.active) {
+    background: #eaf3fd;
+    color: #0b5aa2;
+}
+.page-item.disabled .page-link {
+    color: #cbd5e1;
+    pointer-events: none;
+    background: #f8fafc;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

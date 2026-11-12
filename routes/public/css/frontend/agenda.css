@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 67px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.brand h2 {
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 28px 0;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #075ba7;
+}
+
+.nav-link.active {
+    color: #075ba7;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    height: 2px;
+    background: #075ba7;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.agenda {
+    width: 100%;
+    flex: 1;
+    padding: 18px 20px 10px;
+}
+
+.agenda > h1 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 27px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.agenda-list {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.agenda-card {
+    width: 100%;
+    height: 145px;
+    display: flex;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.agenda-image {
+    width: 170px;
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.agenda-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.agenda-content {
+    flex: 1;
+    padding: 18px 25px;
+}
+
+.agenda-content h2 {
+    margin-bottom: 14px;
+}
+
+.agenda-content p {
+    font-size: 13px;
+    line-height: 1.25;
+    color: #111;
+}
+
+.footer {
+    width: 100%;
+    height: 35px;
+    background: #075ba7;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 0 18px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .agenda {
+        padding: 15px 18px 10px;
+    }
+
+    .agenda-list {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: 65px;
+        padding: 0 14px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        width: 205px;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .agenda {
+        padding: 18px 15px 12px;
+    }
+
+    .agenda > h1 {
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+
+    .agenda-list {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .agenda-card {
+        height: auto;
+        min-height: 120px;
+    }
+
+    .agenda-image {
+        width: 120px;
+        min-height: 120px;
+    }
+
+    .agenda-content {
+        padding: 12px;
+    }
+
+    .agenda-content h2 {
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
+    .agenda-content p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .footer {
+        height: 35px;
+    }
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 25px 0 15px 0;
+    margin: 0;
+}
+.page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.page-item.active .page-link {
+    background: #0b5aa2;
+    color: #ffffff;
+    border-color: #0b5aa2;
+    box-shadow: 0 4px 12px rgba(11, 90, 162, 0.3);
+}
+.page-item .page-link:hover:not(.active) {
+    background: #eaf3fd;
+    color: #0b5aa2;
+}
+.page-item.disabled .page-link {
+    color: #cbd5e1;
+    pointer-events: none;
+    background: #f8fafc;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

@@ -1,0 +1,794 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 67px;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand h2 {
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 25px 0;
+
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #075ba7;
+}
+
+.nav-link.active {
+    color: #075ba7;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 15px;
+
+    height: 2px;
+    background: #075ba7;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* =========================
+   MAIN ANGGOTA
+========================= */
+
+.anggota {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+    padding: 45px 30px 50px;
+
+    flex: 1;
+}
+
+
+/* =========================
+   HEADER ANGGOTA
+========================= */
+
+.anggota-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.anggota-title {
+    max-width: 750px;
+}
+
+
+/* LABEL KECIL */
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 9px;
+
+    color: #075ba7;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-label span {
+    width: 4px;
+    height: 17px;
+
+    display: block;
+
+    border-radius: 5px;
+    background: #075ba7;
+}
+
+
+/* JUDUL */
+
+.anggota-title h1 {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.anggota-title p {
+    max-width: 680px;
+
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TOTAL ANGGOTA
+========================= */
+
+.total-anggota {
+    min-width: 190px;
+    padding: 17px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.total-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #eef6ff;
+    color: #075ba7;
+}
+
+.total-icon i {
+    font-size: 20px;
+}
+
+.total-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-text span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.total-text strong {
+    margin: 2px 0;
+
+    color: #075ba7;
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+.total-text small {
+    color: #666666;
+    font-size: 11px;
+}
+
+
+/* =========================
+   FILTER / PENCARIAN
+========================= */
+
+.filter-box {
+    width: 100%;
+
+    margin-bottom: 22px;
+    padding: 18px 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.filter-item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.filter-item:first-child {
+    flex: 1.5;
+}
+
+.filter-item label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* INPUT PENCARIAN */
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+.input-box i {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777777;
+    font-size: 13px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px 0 36px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.input-box input:focus {
+    border-color: #075ba7;
+}
+
+
+/* SELECT */
+
+.filter-item select {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.filter-item select:focus {
+    border-color: #075ba7;
+}
+
+
+/* TOMBOL */
+
+.filter-button {
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-button button {
+    height: 40px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #075ba7;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.filter-button button:hover {
+    background: #064d8c;
+}
+
+.filter-button a {
+    color: #075ba7;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   TABEL
+========================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* JUDUL TABEL */
+
+.table-header {
+    height: 50px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-header div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #075ba7;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* TABLE */
+
+.anggota-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.anggota-table thead {
+    background: #f5f7f9;
+}
+
+.anggota-table th {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    color: #333333;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.anggota-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.anggota-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.anggota-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* KOLOM */
+
+.anggota-table th:nth-child(1),
+.anggota-table td:nth-child(1) {
+    width: 8%;
+    text-align: center;
+}
+
+.anggota-table th:nth-child(2),
+.anggota-table td:nth-child(2) {
+    width: 25%;
+}
+
+.anggota-table th:nth-child(3),
+.anggota-table td:nth-child(3) {
+    width: 13%;
+}
+
+.anggota-table th:nth-child(4),
+.anggota-table td:nth-child(4) {
+    width: 32%;
+}
+
+.anggota-table th:nth-child(5),
+.anggota-table td:nth-child(5) {
+    width: 22%;
+}
+
+
+/* DATA KOSONG */
+
+.empty-data {
+    padding: 35px !important;
+
+    text-align: center;
+
+    color: #777777;
+}
+
+.empty-data i {
+    margin-right: 7px;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #075ba7;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .anggota {
+        padding: 35px 20px 45px;
+    }
+
+    .filter-form {
+        flex-wrap: wrap;
+    }
+
+    .filter-item {
+        min-width: 200px;
+    }
+
+    .filter-button {
+        width: 100%;
+    }
+
+    .anggota-table {
+        min-width: 750px;
+    }
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+
+    /* MENU */
+
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #111111;
+
+        font-size: 21px;
+
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        right: 15px;
+
+        width: 210px;
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        background: #ffffff;
+
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+
+        padding: 12px;
+
+        font-size: 14px;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+
+    /* CONTENT */
+
+    .anggota {
+        padding: 30px 15px 40px;
+    }
+
+    .anggota-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-bottom: 25px;
+    }
+
+    .anggota-title h1 {
+        font-size: 25px;
+    }
+
+    .anggota-title p {
+        font-size: 13px;
+    }
+
+    .total-anggota {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+
+    /* FILTER */
+
+    .filter-box {
+        padding: 15px;
+    }
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .filter-button {
+        width: 100%;
+    }
+
+    .filter-button button {
+        flex: 1;
+        justify-content: center;
+    }
+
+
+    /* TABLE */
+
+    .anggota-table {
+        min-width: 720px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        min-height: 50px;
+    }
+}

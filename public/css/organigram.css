@@ -1,0 +1,211 @@
+/* =====================================================
+   XTIK PROGRAMMING - ORGANIGRAM SPECIFIC STYLESHEET
+   SMKN 2 Purwakarta - Modern Hierarchy, Glass Cards & Trees
+===================================================== */
+
+.organigram-page-wrapper,
+.organigram-section-bg {
+    width: 100%;
+    padding: 80px 0 100px 0;
+    background: #f8fafc;
+}
+
+/* Tier Section Container */
+.organigram-tier {
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.organigram-tier-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.section-tag-pill {
+    display: inline-block;
+    padding: 6px 20px;
+    background: #eff6ff;
+    color: #0b5aa2;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 2px 8px rgba(11, 90, 162, 0.08);
+}
+
+/* Person Modern Card */
+.person-card-modern {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.person-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(11, 90, 162, 0.12);
+    border-color: #93c5fd;
+}
+
+.person-photo-wrap {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #0b5aa2, #2575fc);
+    box-shadow: 0 8px 20px rgba(11, 90, 162, 0.25);
+    margin-bottom: 18px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.person-card-modern:hover .person-photo-wrap {
+    transform: scale(1.05);
+}
+
+.person-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.person-badge-role {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.person-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.person-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Tier Grid Layouts */
+.tier-grid-2 {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.tier-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tier-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Hierarchy Connector Lines (Desktop) */
+.organigram-connector-line {
+    width: 2px;
+    height: 36px;
+    background: linear-gradient(180deg, #93c5fd, #2575fc);
+    margin: 0 auto 30px auto;
+}
+
+/* Empty State */
+.organigram-empty {
+    padding: 60px 24px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 2px dashed #cbd5e1;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.organigram-empty i {
+    font-size: 3rem;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.organigram-empty h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.organigram-empty p {
+    color: #64748b;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+    .organigram-page-wrapper,
+    .organigram-section-bg {
+        padding: 50px 0 70px 0 !important;
+    }
+
+    .organigram-tier {
+        margin-bottom: 36px;
+    }
+
+    .tier-grid-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tier-grid-3, .tier-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .person-card-modern {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 18px;
+    }
+
+    .person-photo-wrap {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 14px;
+    }
+
+    .person-name {
+        font-size: 1.05rem;
+    }
+}

@@ -1,0 +1,819 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    height: 67px;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand h2 {
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 33px 0;
+
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #075ba7;
+}
+
+.nav-link.active {
+    color: #075ba7;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 27px;
+    height: 2px;
+    background: #075ba7;
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.organigram {
+    width: 100%;
+    padding: 25px 45px 55px;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.page-title {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.page-title h1 {
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.page-title h2 {
+    margin-top: 3px;
+    font-size: 30px;
+    line-height: 1.1;
+    color: #145b9c;
+    font-weight: 700;
+}
+
+.page-title p {
+    margin-top: 9px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   ORGANIZATION CHART
+===================================================== */
+
+.organization-chart {
+    position: relative;
+    width: 100%;
+    min-height: 850px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+}
+
+
+/* =====================================================
+   PERSON CARD
+===================================================== */
+
+.person-card {
+    position: relative;
+
+    width: 350px;
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    border: 1.5px solid #2369a8;
+    border-radius: 17px;
+
+    overflow: hidden;
+    z-index: 5;
+}
+
+
+/* =====================================================
+   PEMBINA
+===================================================== */
+
+.top-card {
+    border-radius: 17px;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.person-photo {
+    width: 82px;
+    height: 84px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.person-photo img {
+    width: 75px;
+    height: 75px;
+
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   PERSON INFO
+===================================================== */
+
+.person-info {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   POSITION
+===================================================== */
+
+.position {
+    color: #075796;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+
+/* =====================================================
+   PEMBINA BLUE
+===================================================== */
+
+.blue-bg {
+    width: 100%;
+    margin: 0;
+    padding: 7px 10px;
+
+    color: #ffffff;
+    background: #17619d;
+
+    border-radius: 0 17px 0 0;
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.name {
+    padding: 0 10px;
+
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   VERTICAL LINES
+===================================================== */
+
+.line {
+    width: 2px;
+    background: #075ba7;
+    flex-shrink: 0;
+}
+
+.line-1 {
+    height: 75px;
+}
+
+.line-2 {
+    height: 75px;
+}
+
+.line-3 {
+    height: 75px;
+}
+
+
+/* =====================================================
+   BRANCH
+===================================================== */
+
+.branch {
+    position: relative;
+
+    width: 900px;
+    height: 175px;
+
+    margin-top: 0;
+
+    overflow: visible;
+}
+
+
+/* =====================================================
+   GARIS HORIZONTAL
+===================================================== */
+
+.branch-horizontal {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 530px;
+    height: 2px;
+
+    background: #075ba7;
+}
+
+
+/* =====================================================
+   GARIS KIRI
+===================================================== */
+
+.branch-left {
+    position: absolute;
+
+    top: 0;
+    left: 50px;
+
+    width: 2px;
+    height: 120px;
+
+    background: #075ba7;
+}
+
+
+/* =====================================================
+   GARIS KANAN
+===================================================== */
+
+.branch-right {
+    position: absolute;
+
+    top: 0;
+    right: 50px;
+
+    width: 2px;
+    height: 120px;
+
+    background: #075ba7;
+}
+
+
+/* =====================================================
+   BOTTOM CARDS
+===================================================== */
+
+.bottom-card {
+    position: absolute;
+    top: 120px;
+}
+
+.sekretaris {
+    left: 0;
+}
+
+.bendahara {
+    right: 0;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+    height: 55px;
+    background: #075ba7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .header {
+        height: 75px;
+        padding: 0 30px;
+    }
+
+    .brand h2 {
+        font-size: 18px;
+    }
+
+    .brand p {
+        font-size: 10px;
+    }
+
+    .nav-menu {
+        gap: 17px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 28px 0;
+    }
+
+    .nav-link.active::after {
+        bottom: 20px;
+    }
+
+    .organigram {
+        padding: 25px 30px 50px;
+    }
+
+    .page-title h1 {
+        font-size: 27px;
+    }
+
+    .page-title h2 {
+        font-size: 27px;
+    }
+
+    .page-title p {
+        font-size: 14px;
+    }
+
+    .person-card {
+        width: 330px;
+    }
+
+    .branch {
+        width: 720px;
+    }
+
+    .branch-horizontal {
+        width: 400px;
+    }
+
+    .bottom-card {
+        width: 330px;
+    }
+
+    .sekretaris {
+        left: 0;
+    }
+
+    .bendahara {
+        right: 0;
+    }
+}
+
+
+/* =====================================================
+   HP / HAMBURGER
+===================================================== */
+
+@media (max-width: 800px) {
+
+    /* ================= HEADER ================= */
+
+    .header {
+        position: relative;
+        height: 70px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .brand h2 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 8px;
+    }
+
+
+    /* ================= HAMBURGER ================= */
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+
+    /* ================= MENU ================= */
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+        top: 50px;
+        right: 0;
+
+        width: 220px;
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        background: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+        z-index: 1000;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .organigram {
+        padding: 30px 20px 40px;
+    }
+
+    .page-title {
+        margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+        font-size: 25px;
+    }
+
+    .page-title h2 {
+        font-size: 25px;
+    }
+
+    .page-title p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .page-title p br {
+        display: none;
+    }
+
+
+    /* ================= BAGAN ================= */
+
+    .organization-chart {
+        min-height: auto;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+
+    /* ================= CARD ================= */
+
+    .person-card {
+        width: min(350px, 100%);
+        height: 85px;
+        border-radius: 16px;
+    }
+
+    .person-photo {
+        width: 78px;
+        height: 82px;
+    }
+
+    .person-photo img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .position {
+        font-size: 19px;
+        margin-bottom: 5px;
+    }
+
+    .name {
+        font-size: 17px;
+        white-space: normal;
+        padding-right: 8px;
+    }
+
+    .blue-bg {
+        padding: 7px 10px;
+        border-radius: 0 16px 0 0;
+    }
+
+
+    /* ================= GARIS TENGAH ================= */
+
+    .line-1,
+    .line-2,
+    .line-3 {
+        height: 45px;
+    }
+
+
+    /* ================= CABANG ================= */
+
+    .branch {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        overflow: visible;
+    }
+
+
+    /* SEMBUNYIKAN GARIS CABANG DESKTOP */
+
+    .branch-horizontal,
+    .branch-left,
+    .branch-right {
+        display: none;
+    }
+
+
+    /* GARIS VERTIKAL DI ATAS CABANG */
+
+    .branch::before {
+        content: "";
+
+        width: 2px;
+        height: 30px;
+
+        background: #075ba7;
+    }
+
+
+    /* CARD BAWAH */
+
+    .bottom-card {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        width: min(350px, 100%);
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        height: 55px;
+    }
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .header {
+        height: 65px;
+        padding: 0 14px;
+    }
+
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .brand h2 {
+        font-size: 13px;
+    }
+
+    .brand p {
+        font-size: 7px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-menu {
+        top: 47px;
+        right: -5px;
+        width: 205px;
+    }
+
+    .organigram {
+        padding: 25px 15px 35px;
+    }
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+    .page-title h2 {
+        font-size: 23px;
+    }
+
+    .page-title p {
+        font-size: 12px;
+    }
+
+    .person-card {
+        height: 80px;
+    }
+
+    .person-photo {
+        width: 73px;
+        height: 76px;
+    }
+
+    .person-photo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .position {
+        font-size: 17px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .footer {
+        height: 50px;
+    }
+}

@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-header {
+    width: 100%;
+    height: 67px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px 0 28px;
+
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+.header-left {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================================
+   MENU / HAMBURGER
+===================================================== */
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #222;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    color: #075ba7;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.header-logo {
+    width: 42px;
+    height: 42px;
+
+    margin-right: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.header-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-brand h1 {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.header-brand p {
+    margin-top: 3px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   ADMIN PROFILE
+===================================================== */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b7b7b7;
+    color: #fff;
+
+    font-size: 17px;
+}
+
+.admin-profile h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.admin-profile p {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #777;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar {
+    position: fixed;
+    top: 67px;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    padding: 27px 15px 18px;
+    background: #073968;
+    color: #fff;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* SCROLLBAR */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.4);
+    border-radius: 10px;
+}
+
+/* TITLE */
+.sidebar h2 {
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #b9c5d1;
+}
+
+/* NAV */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-link {
+    width: 100%;
+    height: 43px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,.1);
+}
+
+.sidebar-link.active {
+     background: #fff;
+    color: #075ba7;
+}
+
+/* BOTTOM */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.7);
+}
+
+/* ================= CONTENT ================= */
+
+.user-content {
+    margin-left: 220px;
+    padding: 85px 25px 80px;
+    min-height: 100vh;
+    background: #fff;
+}
+
+
+/* ================= TITLE ================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 18px 10px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.add-user {
+    background: #0872d8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-user:hover {
+    background: #075fad;
+}
+
+
+/* ================= TABLE ================= */
+
+.user-table-box {
+    width: 100%;
+    background: #eee;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.user-table-box table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: white;
+}
+
+.user-table-box thead th {
+    height: 50px;
+    background: #ddd;
+    border-bottom: 1px solid #aaa;
+    text-align: left;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.user-table-box tbody td {
+    height: 62px;
+    padding: 0 16px;
+    border-bottom: 1px solid #aaa;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ================= COLUMN WIDTH ================= */
+
+.user-table-box th:nth-child(1),
+.user-table-box td:nth-child(1) {
+    width: 7%;
+    text-align: center;
+}
+
+.user-table-box th:nth-child(2),
+.user-table-box td:nth-child(2) {
+    width: 18%;
+}
+
+.user-table-box th:nth-child(3),
+.user-table-box td:nth-child(3) {
+    width: 28%;
+}
+
+.user-table-box th:nth-child(4),
+.user-table-box td:nth-child(4) {
+    width: 22%;
+}
+
+.user-table-box th:nth-child(5),
+.user-table-box td:nth-child(5) {
+    width: 25%;
+}
+
+
+/* ================= ACTION ================= */
+
+.action {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.action button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 14px;
+
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.action .edit {
+    background: #0872d8;
+}
+
+.action .delete {
+    background: #ff0000;
+}
+
+.action button:hover {
+    opacity: .85;
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+    background: #075ba7;
+    color: white;
+    padding: 0 20px;
+    z-index: 800;
+}
+
+.footer-instagram {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.footer-instagram i {
+    font-size: 25px;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .admin-header {
+        height: 75px;
+        padding: 0 18px;
+    }
+
+    .menu-icon {
+        font-size: 25px;
+    }
+
+    .header-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .header-brand h1 {
+        font-size: 20px;
+    }
+
+    .header-brand p {
+        font-size: 11px;
+    }
+
+    .admin-profile {
+        display: none;
+    }
+
+    .sidebar {
+        top: 75px;
+        left: -220px;
+
+        width: 220px;
+        height: calc(100vh - 75px);
+
+        transition: left .3s ease;
+    }
+
+    #sidebar-toggle:checked ~ .sidebar {
+        left: 0;
+    }
+
+    .user-content {
+        margin-left: 0;
+        padding: 95px 15px 70px;
+    }
+
+    .page-header {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .add-user {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+    .user-table-box {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 850px;
+    }
+
+    .footer {
+        left: 0;
+        width: 100%;
+        height: 50px;
+    }
+
+    .footer-instagram {
+        font-size: 13px;
+    }
+
+    .footer-instagram i {
+        font-size: 22px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+}
+
+.menu-icon {
+    position: relative;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(-220px);
+}
+
+#sidebar-toggle:checked ~ .user-content {
+    margin-left: 0;
+    width: 100%;
+}
+
+#sidebar-toggle:checked ~ .footer {
+    left: 0;
+    width: 100%;
+}

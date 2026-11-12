@@ -1,0 +1,820 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.admin-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-header {
+    width: 100%;
+    height: 67px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px 0 28px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #ddd;
+
+    z-index: 1000;
+}
+
+.header-left {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* MENU */
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+
+/* LOGO */
+
+.header-logo {
+    width: 42px;
+    height: 42px;
+
+    margin-right: 11px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* BRAND */
+
+.header-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-brand h1 {
+    font-size: 19px;
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+.header-brand p {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   ADMIN PROFILE
+===================================================== */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b7b7b7;
+
+    color: #fff;
+
+    font-size: 18px;
+}
+
+.admin-profile h3 {
+    font-size: 14px;
+}
+
+.admin-profile p {
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar {
+    position: fixed;
+    top: 67px;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    padding: 27px 15px 18px;
+    background: #073968;
+    color: #fff;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* SCROLLBAR */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.4);
+    border-radius: 10px;
+}
+
+/* TITLE */
+.sidebar h2 {
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #b9c5d1;
+}
+
+/* NAV */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-link {
+    width: 100%;
+    height: 43px;
+    padding: 0 17px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,.1);
+}
+
+.sidebar-link.active {
+     background: #fff;
+    color: #075ba7;
+}
+
+/* BOTTOM */
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.7);
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.organigram-content {
+    margin-left: 220px;
+
+    padding: 88px 25px 25px;
+
+    min-height: calc(100vh - 67px);
+
+    transition: margin-left .3s ease;
+}
+
+.organigram-content > h1 {
+    font-size: 30px;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   INPUT AREA
+===================================================== */
+.input-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 18px;
+    padding: 0 30px 22px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #bbb;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #0872d8;
+}
+
+/* =====================================================
+   ORGANIZATION BOX
+===================================================== */
+
+.organization-box {
+    width: 100%;
+
+    padding: 20px 28px 24px;
+
+    background: #fff;
+
+    border: 1px solid #bbb;
+
+    border-radius: 15px;
+}
+
+.organization-box h2 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+thead {
+    background: #e3e3e3;
+}
+
+th {
+    height: 55px;
+
+    padding: 0 20px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+td {
+    height: 63px;
+
+    padding: 0 20px;
+
+    border-top: 1px solid #b8b8b8;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* COLUMN */
+
+th:first-child,
+td:first-child {
+    width: 60px;
+
+    text-align: center;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 22%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 25%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 17%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 90px;
+
+    text-align: center;
+}
+
+th:last-child,
+td:last-child {
+    width: 110px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.photo-placeholder {
+    width: 42px;
+    height: 42px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #ddd;
+}
+
+
+/* =====================================================
+   ACTION
+===================================================== */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+}
+
+.edit-button,
+.delete-button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    color: #fff;
+
+    font-size: 14px;
+}
+
+.edit-button {
+    background: #0872d8;
+
+    text-decoration: none;
+}
+
+.delete-button {
+    border: none;
+
+    background: #ff0808;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+    width: calc(100% - 220px);
+    min-height: 50px;
+    margin-left: 220px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #075ba7;
+    border-top: 1px solid #bbb;
+    transition: .3s;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.instagram i {
+    font-size: 25px;
+}
+
+.instagram span {
+    font-size: 15px;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TOGGLE
+===================================================== */
+
+#sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(-220px);
+}
+
+#sidebar-toggle:checked ~ .organigram-content {
+    margin-left: 0;
+}
+
+#sidebar-toggle:checked ~ .footer {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .organigram-content {
+        margin-left: 190px;
+
+        padding: 85px 20px 25px;
+    }
+
+    .footer {
+        width: calc(100% - 190px);
+
+        margin-left: 190px;
+    }
+
+    #sidebar-toggle:checked ~ .sidebar {
+        transform: translateX(-190px);
+    }
+
+    .input-area {
+        column-gap: 25px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =====================================================
+   TABLET KECIL
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .admin-header {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .header-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header-brand h1 {
+        font-size: 14px;
+    }
+
+    .header-brand p {
+        font-size: 8px;
+    }
+
+    .profile-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 15px;
+    }
+
+    .admin-profile h3 {
+        font-size: 12px;
+    }
+
+    .admin-profile p {
+        font-size: 9px;
+    }
+
+    .organigram-content {
+        margin-left: 175px;
+
+        padding: 80px 15px 25px;
+    }
+
+    .organigram-content > h1 {
+        font-size: 24px;
+    }
+
+
+    .input-area {
+        grid-template-columns: 1fr;
+
+        row-gap: 13px;
+
+        padding: 0 5px 18px;
+    }
+
+
+    .organization-box {
+        padding: 17px 14px 20px;
+    }
+
+    .organization-box h2 {
+        font-size: 18px;
+    }
+
+
+    table {
+        min-width: 750px;
+    }
+
+
+    .footer {
+        width: calc(100% - 175px);
+
+        margin-left: 175px;
+    }
+
+    #sidebar-toggle:checked ~ .sidebar {
+        transform: translateX(-175px);
+    }
+}
+
+
+/* =====================================================
+   HP
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .admin-header {
+        height: 60px;
+    }
+
+    .header-brand h1 {
+        font-size: 12px;
+    }
+
+    .header-brand p {
+        font-size: 7px;
+    }
+
+    .admin-profile > div:last-child {
+        display: none;
+    }
+
+
+    .sidebar {
+        top: 60px;
+
+        width: 220px;
+    }
+
+
+    .organigram-content {
+        margin-left: 0;
+
+        padding: 75px 12px 25px;
+    }
+
+    .organigram-content > h1 {
+        font-size: 22px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .input-area {
+        padding: 0 0 15px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+    .input-group input {
+        height: 37px;
+    }
+
+
+    .organization-box {
+        padding: 15px 10px 18px;
+    }
+
+
+    table {
+        min-width: 720px;
+    }
+
+
+    .footer {
+        width: 100%;
+
+        margin-left: 0;
+
+        min-height: 60px;
+
+        padding: 8px 12px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .footer p {
+        font-size: 9px;
+    }
+}
+.sidebar nav a.sidebar-link.active {
+    background-color: #fff !important;
+    color: #0872d8 !important;
+}
+
+.sidebar nav a.sidebar-link.active i {
+    color: #0872d8 !important;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    height: 55px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    height: 55px;
+    padding: 15px;
+    border: 1px solid #aaa;
+    background: white;
+}
+
+/* ================= FOTO UPLOAD ================= */
+
+.foto-upload {
+    width: 100%;
+    height: 55px;
+    border: 1px solid #aaa;
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-upload input[type="file"] {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.foto-text {
+    margin-left: 15px;
+    padding: 8px 15px;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    background: #bbb;
+    color: #111;
+
+    font-size: 14px;
+}
